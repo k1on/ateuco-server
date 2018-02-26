@@ -285,7 +285,7 @@ module.exports = new class httpServer {
 
             const extract = require('extract-zip');
             //extract(dirname + '/uploads/images.zip', {dir: process.cwd() + "/images/"}, function (err) {
-            extract(req.file.path, {dir: __dirname + "/images/"}, function (err) {
+            extract(dirname + "/" + req.file.path, {dir: dirname + "/images/"}, function (err) {
                 if(err) {
                     console.error(err);
                     res.status(500).send("can't get file");
