@@ -47,7 +47,6 @@ module.exports = class SocketMethods {
 
     get_catalog_list(socket, data) {
 
-        console.log('get_catalog_list');
         r.table('catalogs').orderBy('name').run(conn, (err, data) => {
             if(err) {
                 console.log('Error', err);
