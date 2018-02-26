@@ -1,0 +1,31 @@
+{
+  "name": "ateuco-server",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "dependencies": {
+    "algoliasearch": "^3.24.5",
+    "base-64": "^0.1.0",
+    "body-parser": "^1.18.2",
+    "express": "^4.16.2",
+    "extract-zip": "^1.6.5",
+    "flow-bin": "^0.56.0",
+    "multer": "^1.3.0",
+    "rethinkdb": "^2.3.3",
+    "socket.io": "^2.0.4"
+  },
+  "devDependencies": {},
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/k1on/ateuco-server.git"
+  },
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/k1on/ateuco-server/issues"
+  },
+  "homepage": "https://github.com/k1on/ateuco-server#readme"
+}
