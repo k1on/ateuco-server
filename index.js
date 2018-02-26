@@ -7,6 +7,7 @@ var r = require('rethinkdb');
 
 server.use(bodyParser.urlencoded({limit: '50mb', extended: true}));
 server.use(bodyParser.json({limit: '50mb'}));
+server.use('/images', express.static('images'));
 
 //static server
 //server.use('/images', express.static('images'));
@@ -77,7 +78,6 @@ server.get('*', function(req, res){
 server.post('*', function(req, res){
     res.status(404).send('invalid uri');
 });
-server.use(express.static('./images'));
 
 
 
