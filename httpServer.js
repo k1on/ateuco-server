@@ -317,7 +317,7 @@ module.exports = new class httpServer {
                     }
                 })
             });
-            console.log('add indexes');
+           /* console.log('add indexes');
             let algolia = require('algoliasearch');
             let client =  algolia('C1WQ7KERHP', 'cedab8e10706271bcec5853128adcd6a');
             let index = client.initIndex('ateuco');
@@ -337,7 +337,7 @@ module.exports = new class httpServer {
                         //console.log(content);
                     });
                 }
-            });
+            });*/
 
 
             res.send("OK");
