@@ -129,6 +129,18 @@ module.exports = new class httpServer {
                 }
 
             });
+            
+            if(typeof data.sort === "object" && data.sort.price) {
+               switch(data.sort.order) {
+                   case "desc":
+	                   query = query.orderBy(r.desc(r.row("price")("value")));
+                       break;
+                   default:
+                       console.log('sort by price asc');
+                       query = query.orderBy(r.asc(r.row("price")("value")));
+                       break;
+               }
+            }
 
             query.run(conn, (err, data) => {
                 if(err) {
@@ -285,7 +297,7 @@ module.exports = new class httpServer {
 
             const extract = require('extract-zip');
             //extract(dirname + '/uploads/images.zip', {dir: process.cwd() + "/images/"}, function (err) {
-            extract(dirname + "/" + req.file.path, {dir: dirname + "/images/"}, function (err) {
+            extract(__dirname + "/" + req.file.path, {dir: dirname + "/images/"}, function (err) {
                 if(err) {
                     console.error(err);
                     res.status(500).send("can't get file");
